@@ -1,0 +1,51 @@
+---
+import dataUsers from "../util/dataUsers.json";
+import IndexLayout from "../layouts/IndexLayout.astro";
+import TweetBoard from "../components/TweetBoard.jsx";
+
+export function getStaticPaths() {
+  const idPaths = dataUsers.map((user) => {
+    return { params: { id: user.user_id } };
+  });
+
+  return idPaths;
+}
+
+const { id } = Astro.params;
+
+const currentUser = dataUsers.find((user) => user.user_id === id);
+---
+
+<IndexLayout title={`Tweet - ${currentUser.name}`}>
+  <section class="fixed h-screen w-screen top-0 left-0">
+    <div
+      class="absolute h-3/5 w-3/5 top-0 left-1/2 -translate-x-1/2 mt-10 bg-slate-300 shadow-md shadow-slate-800"
+      id="tweet-container"
+      transition:name={`tweetboard ${id}`}
+    >
+      <div class="relative h-full w-full flex flex-col">
+        <button
+          class="absolute top-0 right-0 m-3 z-10 bg-blue-400 h-10 w-max rounded-full text-center grid items-center hover:scale-110 transition-all"
+        >
+          <a
+            href="/"
+            class="text-white w-full h-full rounded-full flex justify-center items-center text-center"
+          >
+            <span class="px-2 font-bold">Menu</span>
+          </a>
+        </button>
+        <TweetBoard user={currentUser} client:load />
+      </div>
+    </div>
+  </section>
+</IndexLayout>
+
+<style>
+  section {
+    background-color: rgba(16, 16, 16, 0.488);
+  }
+  #tweet-container {
+    border: 1px solid white;
+    border-radius: 2rem;
+  }
+</style>

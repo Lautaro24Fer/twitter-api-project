@@ -1,0 +1,42 @@
+[
+	{
+		"user_id": "1464456702883991554",
+		"username": "jeroveintidos",
+		"name": "jero",
+		"follower_count": 110056,
+		"profile_pic_url": "https://pbs.twimg.com/profile_images/1786155476817711104/VKABDLSU_normal.jpg",
+		"profile_banner_url": "https://pbs.twimg.com/profile_banners/1464456702883991554/1714261969",
+		"tweetExID": "1789861989428154797",
+		"text": "Este es un tweet de prueba"
+	},
+	{
+		"user_id": "1087757588622651397",
+		"username": "porqueTTarg",
+		"name": "Tendencias en Argentina",
+		"follower_count": 274202,
+		"profile_pic_url": "https://pbs.twimg.com/profile_images/1633225938778439683/pytGv340_normal.jpg",
+		"profile_banner_url": "https://pbs.twimg.com/profile_banners/1087757588622651397/1703452073",
+		"tweetExID": "1789807986866520259",
+		"text": "Este es un tweet de prueba"
+	},
+	{
+		"user_id": "1476973666340540421",
+		"username": "MedioRiver",
+		"name": "Medio River",
+		"follower_count": 69912,
+		"profile_pic_url": "https://pbs.twimg.com/profile_images/1683676004227620865/Cp8WaXmr_normal.jpg",
+		"profile_banner_url": "https://pbs.twimg.com/profile_banners/1476973666340540421/1680286746",
+		"tweetExID": "1789827360855879818",
+		"text": "Este es un tweet de prueba"
+	},
+	{
+		"user_id": "1444091590507700225",
+		"username": "velez1910_",
+		"name": "river plate",
+		"follower_count": 22064,
+		"profile_pic_url": "https://pbs.twimg.com/profile_images/1608249800868208641/h7QhilvS_normal.jpg",
+		"profile_banner_url": "https://pbs.twimg.com/profile_banners/1444091590507700225/1640010382",
+		"tweetExID": "1789793266491113938",
+		"text": "Este es un tweet de prueba"
+	}
+]

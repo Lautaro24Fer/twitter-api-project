@@ -1,0 +1,35 @@
+---
+import IndexLayout from "../layouts/IndexLayout.astro";
+import dataUsers from "../util/dataUsers.json";
+import Card from "../components/Card";
+---
+
+<IndexLayout title="Tweet API">
+  <h1 class="text-4xl font-light text-white w-full text-center">The X API</h1>
+  <p class="font-light text-2xl text-white w-full text-center">
+    Choose one of the users to see his highest tweet
+  </p>
+  <section class="h-full w-full">
+    <div
+      class="flex justify-center flex-wrap w-full h-full overflow-y-auto pt-8 pb-20 gap-5"
+    >
+      {
+        dataUsers.map((user) => (
+          <article
+            transition:name={`tweetboard ${user.user_id}`}
+            transition:animate="slide"
+          >
+            <Card
+              user={user.name}
+              username={user.username}
+              img={user.profile_pic_url}
+              folder={user.profile_banner_url}
+              tw={user.tweetExID}
+              id={user.user_id}
+            />
+          </article>
+        ))
+      }
+    </div>
+  </section>
+</IndexLayout>
