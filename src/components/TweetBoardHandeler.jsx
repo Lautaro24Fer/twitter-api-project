@@ -4,9 +4,6 @@ import TweetBoardLoading from "./TweetBoardLoading";
 import TweetBoardLoaded from "./TweetBoardLoaded";
 
 export default function TweetBoardHandeler({ user }) {
-  console.log(import.meta.env.PUBLIC_API_KEY);
-  console.log(import.meta.env.PUBLIC_API_HOST);
-
   const handleFetch = async () => {
     const url = `https://twitter154.p.rapidapi.com/tweet/details?tweet_id=${user.tweetExID}`;
     const options = {
